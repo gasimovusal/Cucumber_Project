@@ -6,9 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"
+        },
         features = "./src/test/resources/features", // path of future folder
         glue = "stepdefinitions", // path of the step definitions folder
-        tags = "@parameterization1", // will only run this tag
+        tags = "@customer_registration", // will only run this tag
         dryRun = false
 )
 
