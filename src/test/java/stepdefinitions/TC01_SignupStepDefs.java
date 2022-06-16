@@ -95,9 +95,9 @@ public class TC01_SignupStepDefs {
     public void user_clicks_delete_account_button() {
         testCasePage.deleteAccount.click();
     }
-    @Then("user verifies that ACCOUNT DELETED! is visible")
-    public void user_verifies_that_account_deleted_is_visible() {
+    @And("user verifies that ACCOUNT DELETED! is visible  and click Continue button")
+    public void userVerifiesThatACCOUNTDELETEDIsVisibleAndClickContinueButton() {
         Assert.assertTrue(testCasePage.accountDeleteText.isDisplayed());
+        testCasePage.deleteButton.click();
     }
-
 }

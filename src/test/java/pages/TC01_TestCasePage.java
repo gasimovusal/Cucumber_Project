@@ -47,5 +47,6 @@ public class TC01_TestCasePage {
     public WebElement deleteAccount;
     @FindBy(xpath = "//h1[.='Delete Account']")
     public WebElement accountDeleteText;
-
+    @FindBy(xpath = "//button[@class='btn btn-danger']")
+    public WebElement deleteButton;
 }

@@ -8,6 +8,7 @@ Feature: day02_US12302_customer_login.feature
     And user send username "<username>"
     And user send password "<password>"
     When user clicks on login button
+    Then capture the screenshot
     Then close the application
 
     Examples: customer_credentials

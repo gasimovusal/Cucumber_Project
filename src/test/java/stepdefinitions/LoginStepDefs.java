@@ -61,4 +61,8 @@ public class LoginStepDefs {
     public void verifyTheLoginIsSuccessful() {
         Assert.assertTrue(defaultPage.userID.isDisplayed());
     }
+    @When("test case fails")
+    public void test_case_fails() {
+        Assert.assertTrue(false);
+    }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="52.102">
+    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile" time="14.071">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+And user login dropdown.....................................................passed
+And user send username "customer@bluerentalcars.com"........................passed
+And user send password "12345"..............................................passed
+When user clicks on login button............................................passed
+Then capture the screenshot.................................................passed
+Then close the application..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile_2" time="12.872">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+And user login dropdown.....................................................passed
+And user send username "customer1@bluerentalcars.com".......................passed
+And user send password "12346"..............................................passed
+When user clicks on login button............................................passed
+Then capture the screenshot.................................................passed
+Then close the application..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile_3" time="12.244">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+And user login dropdown.....................................................passed
+And user send username "customer2@bluerentalcars.com".......................passed
+And user send password "12347"..............................................passed
+When user clicks on login button............................................passed
+Then capture the screenshot.................................................passed
+Then close the application..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile_4" time="12.475">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+And user login dropdown.....................................................passed
+And user send username "customer3@bluerentalcars.com".......................passed
+And user send password "12348"..............................................passed
+When user clicks on login button............................................passed
+Then capture the screenshot.................................................passed
+Then close the application..................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

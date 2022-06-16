@@ -24,12 +24,12 @@ Feature: register_customer
    And user clicks Continue button
    And user verifies that Logged in as username is visible
    And user clicks Delete Account button
-   And user verifies that ACCOUNT DELETED! is visible
+   And user verifies that ACCOUNT DELETED! is visible  and click Continue button
 
 
    Examples: user_credentials
    |name        |     email|
-   |James Battey|james_battey1992@hotmail.com|
+   |James Battey|james_battey19949@hotmail.com|
 
 
 
