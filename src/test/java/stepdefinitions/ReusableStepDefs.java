@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import utilities.ReusableMethods;
-
 import java.io.IOException;
 
 public class ReusableStepDefs {
