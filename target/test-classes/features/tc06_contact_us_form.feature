@@ -13,6 +13,6 @@
         And user uploads file
         And user clicks submit button
         And user clicks OK button
-#        And user verifies success message Success! Your details have been submitted successfully. is visible
-#        And user clics Home button and verify that landed to home page successfully
+        And user verifies success message Success! Your details have been submitted successfully. is visible
+        And user clicks Home button and verify that landed to home page successfully
 

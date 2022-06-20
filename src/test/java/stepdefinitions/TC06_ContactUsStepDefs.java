@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.TC06_ContactUsPage;
@@ -39,20 +38,19 @@ public class TC06_ContactUsStepDefs {
     }
     @Then("user clicks submit button")
     public void user_clicks_submit_button() {
-        contactUsPage.submitButtton.click();
-        actions.sendKeys(Keys.ENTER).perform();
+        Driver.waitAndClick(contactUsPage.submitButtton);
     }
     @Then("user clicks OK button")
     public void user_clicks_ok_button() {
-        Alert alert = Driver.getDriver().switchTo().alert();
-        alert.accept();
+        ReusableMethods.waitFor(2);
+        Driver.getDriver().switchTo().alert().accept();
     }
-//    @Then("user verifies success message Success! Your details have been submitted successfully. is visible")
-//    public void user_verifies_success_message_success_your_details_have_been_submitted_successfully_is_visible() {
-//        Assert.assertTrue(contactUsPage.successMessage.isDisplayed());
-//    }
-//    @Then("user clics Home button and verify that landed to home page successfully")
-//    public void user_clics_home_button_and_verify_that_landed_to_home_page_successfully() {
-//        contactUsPage.homeButton.click();
-//    }
+    @Then("user verifies success message Success! Your details have been submitted successfully. is visible")
+    public void user_verifies_success_message_success_your_details_have_been_submitted_successfully_is_visible() {
+        Assert.assertTrue(contactUsPage.successMessage.isDisplayed());
+    }
+    @Then("user clicks Home button and verify that landed to home page successfully")
+    public void user_clicks_home_button_and_verify_that_landed_to_home_page_successfully() {
+        contactUsPage.homeButton.click();
+    }
 }

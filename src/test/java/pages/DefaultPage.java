@@ -22,6 +22,10 @@ public class DefaultPage {
     public WebElement select_car;
     @FindBy(xpath = "//input[@name='pickUpLocation']")
     public WebElement pick_place;
+    @FindBy(xpath = "//li[.='Massachusetts Boston']")
+    public WebElement bostonMa;
+    @FindBy(xpath = "(//ul)[3]")
+    public WebElement listOfOptions;
     @FindBy(xpath = "//input[@name='dropOfLocation']")
     public WebElement drop_place;
     @FindBy(xpath = "//input[@name='pickUpDate']")

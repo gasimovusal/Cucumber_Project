@@ -43,7 +43,7 @@ Who to attach screenshot in the html report?
 
 
 
-What s the differences between Data driven, keyword drivena dn hybrid framework?
+What s the differences between Data driven, keyword driven and hybrid framework?
     Data Driven => testing tje test cases with multiple data. In data driven testing, we sent multiple data and expect them to pass.
                     If something fails, then den fix and test with same data until all tests cases pass.
                     excel data, database data, xml data, scenario outline data
@@ -58,3 +58,12 @@ What s the differences between Data driven, keyword drivena dn hybrid framework?
     Ahmet works in Blue Car rental compony
     Framework: Cucumber BDD framework
     We mostly do BDD, but we can do TDD with cucumber using a)scenario outline b) excel
+
+==> Did you do parallel testing in you project?
+    Yes I did.
+==> How do you parallel testing?
+    My current project is cucumber framework.
+    We have pom.xml configuration for parallel testing.
+    I have multiple runner with specific tags for parallel testing. For example, Create reservation runner, and add inventory runner can be run in parallel. When needed I use those runner as well.
+==> What are the required plugin for parallel?
+    maven failsafe(safe run even after some test failure), maven surefire(For parallel testing-thread count is in this plugin), and maven cucumber reporting(generation reports)
