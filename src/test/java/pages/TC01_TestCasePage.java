@@ -28,7 +28,11 @@ public class TC01_TestCasePage {
     @FindBy(id = "password")
     public WebElement password;
     @FindBy(id = "days")
-    public WebElement dob;
+    public WebElement dobDay;
+    @FindBy(id = "months")
+    public WebElement dobMonth;
+    @FindBy(id = "years")
+    public WebElement donYear;
     @FindBy(id = "newsletter")
     public WebElement newsletterButton;
     @FindBy(id = "optin")
@@ -41,7 +45,7 @@ public class TC01_TestCasePage {
     public WebElement accountCreatedText;
     @FindBy(linkText = "Continue")
     public WebElement continueButton;
-    @FindBy(xpath = "//b[.='James Battey']")
+    @FindBy(xpath = "//b")
     public WebElement username;
     @FindBy(linkText = "Delete Account")
     public WebElement deleteAccount;

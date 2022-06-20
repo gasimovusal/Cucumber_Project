@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -9,13 +10,12 @@ import org.openqa.selenium.support.ui.Select;
 import pages.TC01_TestCasePage;
 import utilities.Driver;
 
-import java.security.Key;
-
 public class TC01_SignupStepDefs {
 
     TC01_TestCasePage testCasePage = new TC01_TestCasePage();
     Actions actions = new Actions(Driver.getDriver());
     Select dob;
+    Faker faker = new Faker();
 
     @Then("user navigates to signup page")
     public void user_navigates_to_signup_page() {
@@ -25,13 +25,13 @@ public class TC01_SignupStepDefs {
     public void user_verifies_new_user_signup_is_visible() {
         Assert.assertTrue(testCasePage.newUserSignup.isDisplayed());
     }
-    @And("user enter name {string}")
-    public void userEnterName(String name) {
-        testCasePage.signupNameBox.sendKeys(name);
+    @And("user enters full name")
+    public void userEntersFullName() {
+        testCasePage.signupNameBox.sendKeys(faker.name().fullName());
     }
-    @And("user enter email {string}")
-    public void userEnterEmail(String email) {
-        testCasePage.signupEmailBox.sendKeys(email);
+    @And("user enters email")
+    public void userEntersEmail() {
+        testCasePage.signupEmailBox.sendKeys(faker.internet().emailAddress());
     }
     @Then("user clicks Signup button")
     public void user_clicks_signup_button() {
@@ -51,11 +51,12 @@ public class TC01_SignupStepDefs {
     }
     @Then("user enter Date of birth")
     public void user_enter_date_of_birth() {
-//        dob = new Select(testCasePage.dob);
-//        dob.selectByVisibleText("18");
-        actions.click(testCasePage.dob).sendKeys("18").sendKeys(Keys.ENTER)
-                .sendKeys(Keys.TAB).sendKeys("Jun").sendKeys(Keys.ENTER)
-                .sendKeys(Keys.TAB).sendKeys("1995").sendKeys(Keys.ENTER).perform();
+        dob = new Select(testCasePage.dobDay);
+        dob.selectByVisibleText("18");
+        dob = new Select(testCasePage.dobMonth);
+        dob.selectByVisibleText("June");
+        dob = new Select(testCasePage.donYear);
+        dob.selectByVisibleText("1995");
     }
     @Then("user selects checkbox Sign up for our newsletter!")
     public void user_selects_checkbox_sign_up_for_our_newsletter() {
@@ -67,20 +68,20 @@ public class TC01_SignupStepDefs {
     }
     @Then("user fills details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number")
     public void user_fills_details_first_name_last_name_company_address_address2_country_state_city_zipcode_mobile_number() {
-        actions.click(testCasePage.firstNameBox).sendKeys("James")
-                .sendKeys(Keys.TAB).sendKeys("Battey")
-                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("123 main street")
-                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("MA")
-                .sendKeys(Keys.TAB).sendKeys("Boston")
-                .sendKeys(Keys.TAB).sendKeys("01089")
-                .sendKeys(Keys.TAB).sendKeys("123456789").perform();
+        actions.click(testCasePage.firstNameBox).sendKeys(faker.name().firstName())
+                .sendKeys(Keys.TAB).sendKeys(faker.name().lastName())
+                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(faker.address().streetAddress())
+                .sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(faker.address().state())
+                .sendKeys(Keys.TAB).sendKeys(faker.address().city())
+                .sendKeys(Keys.TAB).sendKeys(faker.address().zipCode())
+                .sendKeys(Keys.TAB).sendKeys(faker.phoneNumber().cellPhone()).perform();
     }
     @Then("user clicks Create Account button")
     public void user_clicks_create_account_button() {
         testCasePage.createAccount.click();
     }
-    @Then("user verifis that ACCOUNT CREATED! is visible")
-    public void user_verifis_that_account_created_is_visible() {
+    @Then("user verifies that ACCOUNT CREATED! is visible")
+    public void user_verifies_that_account_created_is_visible() {
         Assert.assertTrue(testCasePage.accountCreatedText.isDisplayed());
     }
     @Then("user clicks Continue button")

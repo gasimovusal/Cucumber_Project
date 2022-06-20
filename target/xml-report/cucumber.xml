@@ -1,43 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="52.102">
-    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile" time="14.071">
-        <system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user send username "customer@bluerentalcars.com"........................passed
-And user send password "12345"..............................................passed
-When user clicks on login button............................................passed
-Then capture the screenshot.................................................passed
-Then close the application..................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile_2" time="12.872">
-        <system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user send username "customer1@bluerentalcars.com".......................passed
-And user send password "12346"..............................................passed
-When user clicks on login button............................................passed
-Then capture the screenshot.................................................passed
-Then close the application..................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile_3" time="12.244">
-        <system-out><![CDATA[Given user is on the login page.............................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.502">
+    <testcase classname="reserve_car" name="reserve_car_as_customer" time="0.059">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user is on the login page.............................................passed
 And user login dropdown.....................................................passed
 And user send username "customer2@bluerentalcars.com".......................passed
 And user send password "12347"..............................................passed
 When user clicks on login button............................................passed
-Then capture the screenshot.................................................passed
-Then close the application..................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="day02_US12302_customer_login.feature" name="login_customer_profile_4" time="12.475">
-        <system-out><![CDATA[Given user is on the login page.............................................passed
-And user login dropdown.....................................................passed
-And user send username "customer3@bluerentalcars.com".......................passed
-And user send password "12348"..............................................passed
-When user clicks on login button............................................passed
-Then capture the screenshot.................................................passed
-Then close the application..................................................passed
-]]></system-out>
+And user selects a "Mercedes G".............................................passed
+And user enters pick up place "Boston"......................................passed
+And user enters drop off place "Boston".....................................passed
+And user enters pick up data "07/07/2022"...................................passed
+And user enters pick up time "01:00PM"......................................passed
+And user enters drop off date "08/082022"...................................passed
+And user enters drop off time "08:00AM".....................................passed
+Then user clicks on continue reservation....................................passed
+Then verify complete reservation screen pop up..............................undefined
+And user enters card number "1234123412341234"..............................skipped
+And user enters "Vusal Gasimov" on the card.................................skipped
+And user enters "12/25" and "555"...........................................skipped
+And user checks the agreement...............................................skipped
+And user clicks complete reservation........................................skipped
+Then verify Reservation created successfully pop up.........................skipped
+]]></failure>
     </testcase>
 </testsuite>
