@@ -1,4 +1,4 @@
-Feature: Verify Test Casse
+Feature: Verify Test Case
   Scenario: Test_Case_07
     Given user launches the browser
     When user navigate to URL

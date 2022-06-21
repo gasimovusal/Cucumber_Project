@@ -17,7 +17,7 @@
 #  QUESTIONS:
 #  1. Does spelling important in FF and Step defs? YES
 #  2. Does order of steps in feature file matters? YES
-#       YES, because tests are run top tp buttom in the future file
+#       YES, because tests are run top to bottom in the future file
 #  3. does order of steps definitions on step definitions folder matter? NO
 #       NO, because the tests run based of the steps NOT based on the step definition
 
@@ -32,19 +32,19 @@ We can get data in different forms such as List<String, List<Map<String,List<Lis
 What are different ways to get reports in cucumber?
     With cucumber plugins in the runner class. no need to add any dependency. normally this setup is good enough
         html, json, xml
-    Extent Spark reports: we use cucumber spark adamptors to get more advanced reports
+    Extent Spark reports: we use cucumber spark adaptors to get more advanced reports
         add dependencies
         add configuration files
 Who to attach screenshot in the html report?
     in my framework, I have Hooks class. in @After method class I have getScreenShotAs method.
         It captures and attaches the screenshot when a test case fails
-    in adition to this automatic screenshot setup, we have another methos(capture the screenshot) that I run any time to capture the screenshot.
+    in addition to this automatic screenshot setup, we have another methods(capture the screenshot) that I run any time to capture the screenshot.
         I use this at the end of assertions as proof of test execution
 
 
 
 What s the differences between Data driven, keyword driven and hybrid framework?
-    Data Driven => testing tje test cases with multiple data. In data driven testing, we sent multiple data and expect them to pass.
+    Data Driven => testing the test cases with multiple data. In data driven testing, we sent multiple data and expect them to pass.
                     If something fails, then den fix and test with same data until all tests cases pass.
                     excel data, database data, xml data, scenario outline data
     Keyword Driven =>The above categorization can be done and maintained with the help of Excel spreadsheet:
@@ -54,10 +54,10 @@ What s the differences between Data driven, keyword driven and hybrid framework?
                      Test Data: Data can be any value which is needed by the Object to perform any action, like Username value for Username field.
     Hybrid Framework => framework that can do both Behavior Driven Testing + Data Driven
 
-    Normally we used excel in Junit, excel in Test NG, excel in cucumber.
-    Ahmet works in Blue Car rental compony
+    Normally we used Excel in Junit, excel in Test NG, excel in cucumber.
+    Ahmet works in Blue Car rental company
     Framework: Cucumber BDD framework
-    We mostly do BDD, but we can do TDD with cucumber using a)scenario outline b) excel
+    We mostly do BDD, but we can do TDD with cucumber using a) scenario outline b) excel
 
 ==> Did you do parallel testing in you project?
     Yes I did.
