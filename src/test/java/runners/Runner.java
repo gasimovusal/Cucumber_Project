@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",//path od features folder
         glue = {"stepdefinitions"},//path of the step definitions folder
-        tags = "@reserve_car",
+        tags = "@db_user_email",
         dryRun = false
 )
 public class Runner {

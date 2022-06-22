@@ -21,16 +21,16 @@
       And user checks the agreement
       And user clicks complete reservation
       Then verify Reservation created successfully pop up
-#      And user navigated to Reservations screen
-#      And user verifies the last reservation is created
-#      Then user clicks on the last reservation
-#      And verify reservation detail page is displayed
-#      And verify the table has the following fields: Model, Doors, Seats, Luggage, Transmission, Air Conditioning, Fuel Type, Age
-#      Then user clicks on back to reservations
-#      And verify Reservations page is displayed
-#      And user clicks on Home link
-#      Then verify the home page is displayed
-#      And user close the browser
+      And user navigated to Reservations screen
+      And user verifies the last reservation is created
+      Then user clicks on the last reservation
+      And verify reservation detail page is displayed
+      And verify the table has the following fields: Model, Doors, Seats, Luggage, Transmission, Air Conditioning, Fuel Type, Age
+      Then user clicks on back to reservations
+      And verify Reservations page is displayed
+      And user clicks on Home link
+      Then verify the home page is displayed
+      And user close the browser
 
 
       Examples:

@@ -1,6 +1,6 @@
 JDBC:
 
-1. Our database is PostGreSQL so add postgresql dependency
+1. Our database is PostGreSQL so we add postgresql dependency
 <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 <dependency>
     <groupId>org.postgresql</groupId>
