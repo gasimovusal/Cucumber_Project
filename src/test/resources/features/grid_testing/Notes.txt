@@ -1,0 +1,27 @@
+INSTALLATION:
+LINK: https://www.selenium.dev/documentation/grid/getting_started/
+1. Create a folder in the Desktop : SeleniumServer
+2. -Download Selenium Server : https://www.selenium.dev/downloads/
+   -Download chrome driver : https://chromedriver.chromium.org/downloads
+   -Download firefox driver : https://github.com/mozilla/geckodriver/releases
+Move all of them to the SeleniumServer folder and Unzip.
+
+3. Open your Terminal or CMD and change directory to the SeleniumServer folder
+Mac: Terminal
+Windows : CMD
+Mac     :  ls: list of folders
+Windows : dir: list of folder
+
+4. Run the server
+java -jar selenium-server-4.3.0.jar standalone
+http://192.168.0.14:4444/ui# link now show the grid
+
+5. Create feature file : grid.feature
+
+6. Create GridRunner
+
+7. GridStepDefs
+
+8. Write the JAVA Code in the step definitions
+*****DONE with running test cases on Chrome using selenium grid
+9. Run tests on Firefox
